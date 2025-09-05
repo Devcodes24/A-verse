@@ -24,12 +24,10 @@ class ai1 extends Controller
         $response = Http::withHeaders([
             'Authorization' => 'Bearer ' . env('DEEPSEEK_API_KEY'),
             'Content-Type' => 'application/json',
-        ])->post('https://api.sarvam.ai/v1/chat/completions', [
-            'model' => 'sarvam-m', // or another model name if applicable
+        ])->post('https://openrouter.ai/api/v1/chat/completions', [
+            'model' => 'deepseek/deepseek-r1:free', // or another model name if applicable
             'messages' => [
-                ['role' => 'system', 'content' => 'You are a hindu knowledgeable saint who solves and helps others to solve there life problems. You only talk on proofs and only using hindu vedic books verses and similar situation story according to provided preferences-1. Shrimad Bhagvat Geeta by Lord krishna
-
-2. Ramcharitmanas , Mahabharat, 3. Rigveda, Yajurveda, Samaveda and Atharvaveda. Your responses are very exact and concise but its you very much habit to provide verse of verified hindu vedic textbooks and story written there. Also for better result answer in hindi language and verse in sanskrit.'],
+                ['role' => 'system', 'content' => 'You are a helpful "EcoJourney planner" assistant that only answers questions about Travelling.'],
                 ['role' => 'user', 'content' => $userInput],
             ],
         ]);
