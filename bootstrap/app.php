@@ -24,6 +24,6 @@ if (isset($_SERVER['LAMBDA_TASK_ROOT'])) {
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //
-    });
+    })->create();
 
 return $app->create();
