@@ -18,6 +18,7 @@ $app = Application::configure(basePath: dirname(__DIR__))
     })
     ->create();
 
+// Redirect storage + cache to writable /tmp on Vercel
 if (isset($_SERVER['LAMBDA_TASK_ROOT'])) {
     $app->useStoragePath('/tmp/storage');
     $app->useBootstrapPath('/tmp/bootstrap/cache');
