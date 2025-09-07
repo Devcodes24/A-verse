@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eco Journey Planner</title>
+    <title>A Verse</title>
     <style>
         body {
             font-family: 'Merriweather', serif; /* Elegant serif font for a travel theme */
